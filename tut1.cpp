@@ -156,3 +156,35 @@ ms.erase(ms.find(1));// 1,1,1
                |---------| points here and ddeltes 1
 ms.erase(ms.find(1),msfind(1)+2);//erase range of data in set
 
+//unordered set::
+unordered_set<int> us;//stores unique elements but in unsorted fashion
+//can use all functions except upper and lower bound;
+
+//Maps:: //upper and lowerbound &all other are same
+map<int,int> mpp;
+map<int,pair<int,int>> mpp;
+map<pair<int,int>,int> mpp;
+
+mpp[1]=2;
+mpp.emplace({3,1});
+mpp.insert({2,4});
+mpp[{2,3}]=10;
+
+for(auto it: mpp){
+
+    cout<<it.first<<" "<<it.second<<endl;
+    
+}
+cout<<mpp[1];//-->2
+cout<<mpp[5];//-->0 as 5 key not present
+
+
+auto it =mpp.find(3);//holds key
+cout<<*(it).second;//gives value
+auto it =mpp.find(5);//gives .end as 5 !avl
+
+//multimap::
+//can store duplicate key and stores in sorted manner
+//unordered map::
+//cant store duplicate key and stores in unsorted manner
+
