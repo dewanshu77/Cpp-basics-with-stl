@@ -120,7 +120,28 @@ pq_1.push(2);//2,5
 pq_1.emplace_back(10);//2,5,10
 cout<<pq_1.top();//2
 
+//sets
+set<int> st;//enters data uniquely and in increasing fashion
+st.insert(1);//1
+st.emplace(2);//1,2
+st.insert(2);//1,2
+st.insert(4);//1,2,4
+st.insert(3);//1,2,3,4
+auto it=st.find(3);//rturns address of 3 if avl
+auto it-st.find(6);//rturns address of st.end as6 isnt avl
+st.erase(5);//erases 5
+int ct=st.count(5);return 0 if 5 isnt avl 1 if avl
+auto th=st.find(3);
+st.erase(th);//we can pass address too in erase instead of value
+auto u_2=st.find(2);
+auto u_4=st.find(4);
+st.erase(u_2,u_4);//erases 2--->4 address values
 
-
-
-
+// lowerbound::
+we have a set 1,2,3,4,5
+    *(s.lower_bound(4));//returns the dereferenced value 4 if exists other wise just greater value if 4 isnt there
+                        //if neither 4 nor >4 value exists then it return st.end()-->dereferenced gives 0 value
+    *(s.upper_bound(5))://returns 5 if avl just>5 if 5!avl  
+//Multiset
+        
+        
