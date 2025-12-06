@@ -103,7 +103,22 @@ m++;
 }
 //vectors::
 
+// priority que
+//declaration:::
+priority_queue<int>pq;//known as max heap as max num is at top regardless of order of input of data
+pq.push(5);//5
+pq.push(2);//5,2
+pq.emplace_back(10);//10,5,2
+cout<<pq.top();//10
+pq.pop();//5,2
+cout<<pq.top();//5
+//size,swap,empty() same as in others
 
+priority_queue<int,vector<int>,greater<int>>pq_1;//minimum heap
+pq_1.push(5);//5
+pq_1.push(2);//2,5
+pq_1.emplace_back(10);//2,5,10
+cout<<pq_1.top();//2
 
 
 
