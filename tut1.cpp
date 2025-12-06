@@ -144,4 +144,15 @@ we have a set 1,2,3,4,5
     *(s.upper_bound(5))://returns 5 if avl just>5 if 5!avl  
 //Multiset
         
-        
+multiset<int>ms;
+ms.insert(1);//1
+ms.insert(1);//1,1
+ms.insert(1);//1,1,1
+
+ms.erase(1);//all 1's are erased
+int cnt = ms.count(1);//freq of 1
+ms.erase(ms.find(1));// 1,1,1
+               |         ^
+               |---------| points here and ddeltes 1
+ms.erase(ms.find(1),msfind(1)+2);//erase range of data in set
+
